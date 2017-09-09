@@ -1,0 +1,185 @@
+main.home {
+  section {
+    &.p {
+  font-size: 16px;
+  line-height: 30px; }
+  p.lead {
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0;
+    margin: 15px 0 15px;
+    font-weight: 400; }
+    @media (min-width: 768px) {
+      p.lead {
+        font-size: 25px;
+        line-height: 32px; } }
+
+    &.pageheader {
+      h1{
+        color: white;
+        font-weight:600;
+      }
+      background: url(<%= asset_path('lol.jpg')%>) repeat-y;
+      background-position-x: -700px;
+      background-position-y: -100px;
+      background-opacity: 70;
+      min-height: 600px;
+      @media screen and (min-width: 992px) {
+        background-size: cover;
+        background-position-y: -240px;
+        background-position-x: 0px;
+      }
+      @media (max-width: 992px) {
+        background-repeat: no-repeat;
+        background-position-x: -600px;
+        background-position-y: -200px;
+      }
+      @media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) { 
+        background-size: inherit;
+      }
+      padding:100px 0 20px 0;
+      text-align:center;
+      .title-logo{
+        text-align: center;
+        height: 40px;
+        width: 150px;
+        display: inline-block;
+        background: url(<%= asset_path('logo-yellow.png')%>);
+        background-size:150px 40px;
+        margin-bottom: 30px;
+      }
+      .more-scla{
+        color: white;
+        margin-top: 80px;
+        cursor: pointer;
+      }
+      .learn-more {
+        padding: 10px 45px;
+        font-size: 18px;
+        text-transform: none;
+      }
+    }
+    &.stats{
+      padding: 30px 0;
+      background-color: #3393d6;
+      text-align:center;
+      svg{
+        width:60px;
+        height:20px;
+        path ,rect{
+          fill: #244b6c;
+          opacity:1;
+        }
+      }
+      .stat-number{
+        font-size:60px;
+        color:white;
+        font-family: "proxima-nova-extra-condensed",sans-serif;
+        font-weight: 100;
+      }
+      .stat-text{
+        color: #244b6c;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    &.how-scla-works{
+      background-position-y: -100px;
+      text-align : center;
+      @media screen and (min-width: 992px) {
+        background-size: cover;
+      }
+      .title {
+        font-size: 23px;
+      }
+      .cards {
+        .card {
+          padding: 5px !important;
+
+          @media screen and (min-width: 992px) {
+            &:after{
+              -webkit-mask-size: cover;
+              mask-size: cover;
+              background-color: yellow;
+              background-size: 30px auto;
+              width: 20px;
+              height: 20px;
+              content: '';
+              display: inline-block;
+              position: absolute;
+              right: -14px;
+              top: 200px;
+            }
+            &:last-child:after{
+              display:none;
+            }
+          }
+        }
+      }
+      .btn{
+        margin-top: 40px;
+      }
+    }
+    &.upcoming-events{
+      text-align: center;
+      .upcoming-head {
+        font-size: 33px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      .all-events {
+        margin: 15px 0;
+        .text {
+          font-size: 14px;
+        }
+      }
+      .read-more {
+        cursor:pointer;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      .events{
+        .event{
+          min-height: 250px;
+          padding: 10px 40px;
+          @media screen and (min-width: 992px) {
+            border-right: 1px rgba(255,255,255,0.5) solid;
+          }
+          @media screen and (max-width: 992px) {
+            min-height: 200px;
+          }
+          &:last-child{
+            border: none;
+          }
+          .event-details{
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+          }
+          .event-title{
+            font-size: 30px;
+            margin: 10px 0;
+          }
+          .event-type{
+            display: inline-block;
+            margin-bottom: 10px;
+            width: 62px;
+            height: 19px;
+            background-color: white;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0 !important;
+  }
+  
+}
