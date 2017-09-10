@@ -1,13 +1,47 @@
 main.home {
 
-  
   section {
   .learn-more {
         padding: 10px 45px;
         font-size: 18px;
         text-transform: none;
       }
+
   
+  .btn {
+  display:inline-block;
+  color:white;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding:10px 25px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font-weight: 600;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-top:20px;
+  -webkit-transition: color .3s ease, background-color .3s ease;
+  -moz-transition: color .3s ease, background-color .3s ease;
+  -o-transition: color .3s ease, background-color .3s ease;
+  transition: color .3s ease, background-color .3s ease;
+  &:hover, &:focus, &:active  {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  &.light-blue {
+    background:#66a0ff;
+    &:hover {
+      background:#113f89;
+      color:white;
+    }
+  }
+}
+
     &.p {
   font-size: 16px;
   line-height: 30px; }
@@ -32,11 +66,11 @@ main.home {
         font-weight: bold;
         font-family: 'Ubuntu',sans-serif;
       }
-      background: url(<%= asset_path('lol.jpg')%>) repeat-y;
+      background: url(<%= asset_path('lol3.jpg')%>) repeat-y;
       background-position-x: -700px;
       background-position-y: -100px;
       background-opacity: 70;
-      min-height: 600px;
+      min-height: 800px;
       @media screen and (min-width: 992px) {
         background-size: cover;
         background-position-y: -240px;
